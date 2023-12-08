@@ -6,35 +6,67 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- //modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="upload-area">
+          <label for="fileInput" class="upload-label">
+            <input type="file" id="fileInput" multiple />
+          </label>
+          <button id="uploadBtn">Upload</button>
+        </div>
+        <div>
+          <ul class="file-list">
+            <li>index.html</li>
+            <li>style.css</li>
+            <li>script.js</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- //card container -->
     <div class="container">
       <div>
-        <div>content 1</div>
-        <div id="incomplete" class="card">card 1</div>
+        <div class="cardtitle">
+          <div>
+            <span class="titleColorRed">red</span> <span>incomplete</span>
+          </div>
+          <span>0</span>
+        </div>
+        <div id="incomplete" class="card"></div>
       </div>
       <div>
-        <div>content 2</div>
-        <div id="todo" class="card">Card 2</div>
+        <div class="cardtitle">
+          <div><span class="titleColorBlue">red</span> <span>Todo</span></div>
+          <span>0</span>
+        </div>
+        <div id="todo" class="card"></div>
       </div>
 
       <div>
-        <div>content 3</div>
-        <div id="doing" class="card">Card 3</div>
+        <div class="cardtitle">
+          <div>
+            <span class="titleColorYellow">red</span> <span>Doing</span>
+          </div>
+          <span>0</span>
+        </div>
+        <div id="doing" class="card"></div>
       </div>
       <div>
-        <div>content 4</div>
-        <div id="underReview" class="card">Card 4</div>
+        <div class="cardtitle"><span>Under Review</span> <span>0</span></div>
+        <div id="underReview" class="card"></div>
       </div>
 
       <div>
-        <div>content 5</div>
-        <div id="complete" class="card">Card 5</div>
+        <div class="cardtitle"><span>Complete</span> <span>0</span></div>
+        <div id="complete" class="card"></div>
       </div>
       <div>
-        <div>content 6</div>
-        <div id="overdone" class="card">Card 6</div>
+        <div class="cardtitle"><span>Overdone</span> <span>0</span></div>
+        <div id="overdone" class="card"></div>
       </div>
-
-      <!-- Add more cards as needed -->
     </div>
     <script src="script.js"></script>
     <script
