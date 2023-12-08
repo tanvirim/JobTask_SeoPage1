@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&family=Roboto:ital,wght@0,500;1,400;1,500&family=Rubik:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 10px; /* Set your desired width */
+  color: black;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #0070bb;
+  border-radius: 10px;
+}
+body {
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+.container {
+  width: 1600px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: 50px;
+  margin-right: 60px;
+
+  height: 720px;
+  display: flex;
+}
+.card {
+  display: flex;
+  background-color: #f2f4f7;
+  flex-direction: column;
+  width: 350px;
+  flex: 0 0 auto;
+  height: 90vh;
+  margin-right: 10px;
+  overflow-y: scroll;
+}
+
+/* subcard styling */
+.subCard {
+  display: flex;
+  border-radius: 10px;
+  height: 130px;
+  flex: 0 0 auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  margin: 10px 5px 10px 10px;
+
+  padding: 10px;
+}
+.dp {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.section1 {
+  display: flex;
+  gap: 60px;
+}
+
+.section1 .part1 {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+.section1 .part1 p {
+  margin-top: 5px;
+}
+.section1 .part2 {
+  display: flex;
+  gap: 5px;
+}
+.section1 .part2 p {
+  margin-top: 5px;
+}
