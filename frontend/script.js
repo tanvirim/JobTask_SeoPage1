@@ -128,6 +128,44 @@ function displayModal() {
   });
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  const fileInput = document.getElementById('fileInput');
+  const fileList = document.querySelector('.file-list');
+  const uploadBtn = document.getElementById('uploadBtn');
+
+  fileInput.addEventListener('change', handleFileSelect);
+
+  // ... (rest of the code remains the same)
+
+  uploadBtn.addEventListener('click', function () {
+    const files = fileInput.files;
+    const formData = new FormData();
+
+    for (let i = 0; i < files.length; i++) {
+      formData.append('files', files[i]);
+    }
+
+    // Adjust the URL to match your backend API endpoint
+    fetch('http://localhost:3000/upload', {
+      // Example URL for backend
+      method: 'POST',
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const uploadedFiles = data.fileNamesWithExtensions;
+        console.log('Uploaded Files:', uploadedFiles);
+        // Handle uploaded files as needed
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        // Handle error scenario
+      });
+  });
+
+  // ... (other event listeners and functions)
+});
+
 subCardDisplay();
 showDate();
 uploadButton();
